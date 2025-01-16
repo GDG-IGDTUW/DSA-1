@@ -1,0 +1,63 @@
+int orangesRotting(vector<vector<int>>& grid) {
+        
+        int row= grid.size();
+        int col= grid[0].size();
+
+        queue < pair < pair <int , int> , int>> que;
+      vector<vector<int>> visited(row, vector<int>(col, 0)); 
+
+        for ( int i=0 ; i< row ; i++)
+        {
+            for ( int j=0 ; j<col ; j++)
+            {
+                if( grid[i][j]==2)
+                {
+                    que.push({{i,j}, 0});
+                    visited[i][j]=2;
+                }
+
+                else
+                {
+                    visited[i][j]=0;
+                }
+            }
+        }
+
+
+        int time_max=0;
+        int drow[]={-1 , 0 , 1,0 };
+        int dcol[]= { 0 , -1 , 0 , 1};
+        while ( !que.empty() )
+        {
+            int r=que.front().first.first;
+            int c=que.front().first.second;
+            int time= que.front().second;
+            que.pop();
+            time_max=max( time_max , time);
+
+            for (int i=0 ; i< 4; i++ )
+            {
+                int nrow=r+drow[i];
+                int ncol=c+dcol[i];
+
+                if( nrow>=0 && nrow<row && ncol>=0 && ncol<col && grid[nrow][ncol]==1 &&      visited[nrow][ncol]==0)
+                {
+                    que.push({{nrow,ncol},time+1 });
+                    visited[nrow][ncol]=2;
+                }
+            }
+        }
+
+
+        for ( int i=0 ; i< row ; i++)
+        {
+            for ( int j=0 ; j< col ; j++)
+            {
+                if( grid[i][j]==1 && visited[i][j]!= 2)
+                {
+                    return -1;
+                }
+            }
+        }
+
+        return time_max;
