@@ -51,6 +51,6 @@ public class TannuRawatQ2JumpGame {
 
     public static void main(String[] args) {
         int[] arr = { 1, 3, 5, 8, 9, 2, 6, 7, 6, 8, 9 };
-        System.out.println("Min-Jumps" + minJumps(arr));
+        System.out.println("Min-Jumps => " + minJumps(arr));
     }
 }
