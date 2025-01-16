@@ -1,0 +1,49 @@
+ void dfs( vector<int>adjlist[] ,vector<int> & visited, int node )
+    {
+        visited[node]=1;
+
+        for( auto it: adjlist[node])// traversing the adjacent elements
+        {
+            if( visited[it] == 0)
+            {
+                dfs( adjlist , visited , it);
+            }
+        }
+    }
+
+    int findCircleNum(vector<vector<int>>& isConnected) {
+        
+        // converting adj matrix to list
+        
+        int v= isConnected.size(); // v is no. of vertices.
+        vector<int> adjlist[v];
+
+        for ( int i=0 ; i<v ; i++)
+        {
+            for ( int j=0 ; j< v ; j++)
+            {
+                if( isConnected[i][j]==1 && i!=j )
+                {
+                    adjlist[i].push_back(j);
+                    adjlist[j].push_back(i);
+                }
+            }
+        }
+
+        //done
+
+        // finding provinces:
+
+        vector<int> visited( v, 0); //visited array
+        int count=0;
+        for ( int i=0 ; i< v ; i++)
+        {
+            if( visited[i]==0)
+            {
+                count++;
+                dfs(adjlist , visited , i);
+            }
+        }
+
+        return count;
+    }
