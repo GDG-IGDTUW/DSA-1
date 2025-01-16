@@ -1,0 +1,7 @@
+Basically, we have to check whether one string is a rotation of another string or not.
+
+ALGORITHM:
+1. Check if the length of two given strings is equal. If not, then simply return false. 
+Because strings are rotated so length of second string should be equal to the first one.
+
+2. if the 'goal' string is a rotation of string 'str', then string 'str + str' must contains the 'goal' string.
