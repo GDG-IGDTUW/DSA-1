@@ -1,0 +1,13 @@
+INTUITION:
+The solution correctly identifies whether the list is a palindrome by comparing the first half with the reversed second half.
+
+ALGORITHM:
+1. Find the middle element using Tortoise-Hare Algorithm.
+
+2. Reverse the second half of linked list.
+
+3. Compare both the halves.
+
+4. Before returning the answer, make sure to reverse the last half of linked list to original.
+
+5. Finally return true or false.
