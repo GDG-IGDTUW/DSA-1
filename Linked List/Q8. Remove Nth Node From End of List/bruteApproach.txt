@@ -1,0 +1,6 @@
+ALGORITHM:
+1. Calculate length of linked list.
+
+2. Deletion of (length - N + 1)th node from beginning. for this, we need to stop at (length - N)th index.
+
+Edge Case: If N = length of linked list, we have to delete head.

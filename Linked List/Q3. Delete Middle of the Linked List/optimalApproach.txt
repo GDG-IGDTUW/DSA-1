@@ -1,0 +1,14 @@
+Optimal Approach is by using "Tortoise-Hare Algorithm"
+
+Algorithm:
+1. Initialize two pointers 'slow' and 'fast' to head and one pointer 'prev' to null. 'Prev' is used to keep track of previous nodes.
+
+2. Update slow by one step and fast by two steps until fast becomes or fast's next becomes null. Here, 'slow' pointer is similar to tortoise who moves slowly and 'fast' is similar to 'hare' who moves fast.
+
+3. Before incrementing slow, update prev to slow and then increment.
+
+4. After finishing the iteration, 'prev' pointer will be at (n / 2)th i.e, (middle - 1)th pointer.
+
+5. Now just delete the middle node by making point prev's next to (prev's next)'s next.
+
+6. Return head of linked list.

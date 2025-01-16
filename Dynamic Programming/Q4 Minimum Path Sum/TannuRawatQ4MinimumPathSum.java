@@ -15,7 +15,7 @@ Tabulation:
 A 2D dp array is initialized with the value of the top-left corner.
 The dp array is filled bottom-up, starting from the second row and column.
 For each cell, the minimum path sum from the previous cell (either above or to the left) is calculated and added to the current cell's value.
-The final result is the value in the bottom-right corner of the dp array.
+
  */
 
 public class TannuRawatQ4MinimumPathSum {

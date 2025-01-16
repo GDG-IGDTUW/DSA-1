@@ -1,0 +1,28 @@
+What is BFS?
+Breadth-First Search (BFS) is a graph traversal algorithm used to explore nodes (vertices) in a graph. It starts at a specified node and explores all of its neighbors at the current level before moving on to nodes at the next level. BFS is particularly useful for finding the shortest path in an unweighted graph.
+
+Algorithm: BFS (Breadth-First Search)
+    Input: A connected undirected graph represented by an adjacency list adj (a list of lists), where adj[i] represents the neighbors of vertex i.
+    Output: A list containing the BFS traversal of the graph starting from vertex 0.
+
+Steps:
+    1. Initialize:
+        (a) Create an empty queue q to store vertices during the BFS process.
+        (b) Create a boolean array vis[] of size n (number of vertices in the graph) to mark visited vertices.
+        (c) Create an empty list bfs to store the BFS traversal result.
+
+    2. Start BFS:
+        (a) Add the starting vertex (vertex 0) to the queue q.
+        (b) Mark vertex 0 as visited (vis[0] = true).
+
+    3. Traverse:
+        (a) While the queue q is not empty:
+                i. Dequeue the front element (vertex node) from the queue.
+                ii. Add node to the bfs list.
+                iii. For each neighbor of the node (from the adjacency list adj[node]):
+                        A. If the neighbor has not been visited:
+                                *1. Mark it as visited (vis[neighbor] = true).
+                                *2. Add the neighbor to the queue q.
+    
+    4. Return:
+        (a) After the traversal, return the bfs list containing the BFS traversal order of the graph.
