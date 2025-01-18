@@ -1,0 +1,28 @@
+def trap(height):
+    n = len(height)  # Get the length of the input list
+
+    # If the input is empty or too small to trap water, return 0
+    if n == 0:
+        return 0
+
+    # Initialize the left max and right max arrays
+    leftMax = [0] * n
+    rightMax = [0] * n
+
+    # Initialize the water variable
+    water = 0
+
+    # Set the first value of left max
+    leftMax[0] = height[0]
+    for i in range(1, n):
+        leftMax[i] = max(leftMax[i - 1], height[i])  # Calculate left max array
+
+    # Set the last value of right max
+    rightMax[n - 1] = height[n - 1]
+    for i in range(n - 2, -1, -1):
+        rightMax[i] = max(rightMax[i + 1], height[i])  # Calculate right max array
+    # Calculate the trapped water
+    for i in range(n):
+        water += min(leftMax[i], rightMax[i]) - height[i]  # Calculate water trapped at each index
+
+    return water
