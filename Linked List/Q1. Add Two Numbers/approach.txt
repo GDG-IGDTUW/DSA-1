@@ -1,0 +1,27 @@
+ALGORITHM:
+1. Create a dummy node which is the head of new linked list.
+
+2. Create a node temp initialised to dummy.
+
+3. Initialize carry to 0.
+
+4. Initialize two nodes: 't1' to head of list 1 and 't2' to head of linked list 2.
+
+5. Loop through both list until we reach end of both the linked list and carry becomes zero.
+        (a) Initialise a variable 'sum' to 0.
+
+        (b) Check if t1 is not null.
+                A. sum = sum + value of t1.
+                B. Increment t1.
+
+        (c) Check if t2 is not null.
+                A. sum = sum + value of t2.
+                B. Increment t2.
+
+        (d) Increment sum with carry.
+
+        (e) Update carry with sum / 10.
+
+        (f) Create a new node with the digit value of (sum % 10) and set it to temp's node next. Finally update temp with temp = temp's next;
+
+6. Return dummy's next node.

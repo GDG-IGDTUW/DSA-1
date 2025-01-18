@@ -1,0 +1,16 @@
+*In the question, we have to check whether we can place the number of flowers given in such a way that no two flowers 
+are planted adjacent to each other. (0-> empty place, 1-> planted area)
+
+// To solve this, we have to keep in mind that a plant can only be planted if its left and right adjacent neighbours 
+are not already occupied.
+Therefore, we have to check if the side neighbour values are equal to 0
+
+// But what if index values 0 and last are also not occupied (arr[0]==0 || arr[last]==0), for that, 
+1. if index value is equal to 0, we can say that left position is not existing (index -1), therefore, from left its safe
+   and for right we have to check for arr[i+1] value (it should be equal to 0 for plant to be placed)
+2. if index value id last, we can say that right position is out of array bounds, therefore we are safe from right
+   but for left we have to check if arr[i-1]==0
+
+// Therefore, for every index we have to check if its not occupied, if we are safe from left side and right side,
+then we can place the flower there 
+// If the number of flowers placed becomes equal to n value given, we can return true else we return false 

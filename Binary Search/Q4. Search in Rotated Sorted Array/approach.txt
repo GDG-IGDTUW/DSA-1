@@ -1,0 +1,53 @@
+Since it is a sorted array no matter it is rotated or not, we'll apply binary search approach algorithm that divides the search space into half.
+
+INTUITION:
+1. When dividing the search space into two halves, it is so sure that atleast one of the halves will be sorted.
+
+2. If the target value is equal to the mid value of array then return mid index.
+
+3. Else we'll check which part of array is sorted.
+
+4. In every part, we check for the presence of element.
+
+IMPORTANT !!
+Since it is not maintioned in the question that the array does not contain duplicates, so we have to consider a case that array might have duplicates in it.
+For eg: arr = [3, 1, 2, 3, 3, 3, 3]
+
+In this case, arr[start] = arr[mid] = arr[end]. If a target value is not equal to mid value, then it is also not equal to start and end value.
+Thereby, we shrink the search space.
+
+Time complexity = O(log N), where N is the size of array.
+Space Complexity = O(1)
+
+ALGORITHM: Search in Rotated Sorted Array
+    Input: Rotated sorted array arr of size N and target value target.
+    Output: Index of the target value in the array, or -1 if not found.
+
+STEPS:
+    1. Initialize Pointers:
+            (a) Start with two pointers: start = 0 and end = N - 1.
+
+    2. Binary Search Loop:
+            (a) While start <= end:
+                    i. Calculate mid as: 𝑚𝑖𝑑 = 𝑠𝑡𝑎𝑟𝑡 + (𝑒𝑛𝑑 − 𝑠𝑡𝑎𝑟𝑡) / 2
+                    ii. If arr[mid] == target, return mid (target found).
+
+    3. Handle Duplicates:
+            (a) If arr[start] == arr[mid] and arr[mid] == arr[end]:
+                    i. Increment start by 1 and decrement end by 1 to shrink the search space.
+
+    4. Check Which Half is Sorted:
+            (a) Left Half Sorted:
+                    i. If arr[start] <= arr[mid]:
+                        A. Check if the target lies in the left half:
+                            I. If arr[start] <= target < arr[mid], update end = mid - 1.
+                            II. Else, update start = mid + 1.
+
+            (b) Right Half Sorted:
+                    i. Else:
+                        A. Check if the target lies in the right half:
+                            I. If arr[mid] < target <= arr[end], update start = mid + 1.
+                            II. Else, update end = mid - 1.
+
+    5. Target Not Found:
+        (a) If the loop terminates without finding the target, return -1.

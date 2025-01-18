@@ -1,0 +1,23 @@
+public class TowerOfHanoi{        
+        public static int toh(int n, int fromRod, int toRod, int auxRod) {
+            if (n == 0) {
+                return 0; 
+            }          
+            int moves1 = toh(n - 1, fromRod, auxRod, toRod);
+            System.out.println("Move disk " + n + " from rod " + fromRod + " to rod " + toRod); 
+            int moves2 = toh(n - 1, auxRod, toRod, fromRod);
+            return moves1 + 1 + moves2;
+        }
+    
+        public static void main(String[] args) {
+            int n = 3; // Number of disks
+            int fromRod = 1; // Starting rod
+            int toRod = 3;   // Target rod
+            int auxRod = 2;  // Auxiliary rod
+    
+            System.out.println("Steps to solve Tower of Hanoi:");
+            int totalMoves = toh(n, fromRod, toRod, auxRod);
+            System.out.println("Total moves required: " + totalMoves);
+        }
+    }
+

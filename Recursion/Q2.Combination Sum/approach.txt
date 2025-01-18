@@ -1,0 +1,24 @@
+// Combination Sum
+i.e. we have to find out all the combinations of elements taht sum up to give the desired target
+given that any element can be used multiple times
+
+Approach-->
+* Since we are trying to find all the possible ways of arrangement of elements that sum up to the target, 
+therefore recursion is used.
+*While looking out for different possible combinations, we have a choice to either pick an element or to not pick 
+the element. 
+
+RECURSION
+// Base Case--> We will consider the combination if the index value reaches to the end of the array and 
+if the target value becomes 0
+
+1. If we pick an element, then the target value would get reduced considerably until it reaches 0 that means, 
+every time we pick an element, we have a choice of picking it again next time if and only if the value that 
+is being picked is less than or equal to the target value.
+
+2. If we decide to not pick an element, then we can simply move to the next index
+
+For eg.
+arr=[2, 3, 6, 7], target=7 has two unique combinations: 
+a. [2, 2, 3]
+b. [7]

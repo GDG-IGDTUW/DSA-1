@@ -1,0 +1,23 @@
+class Solution:
+    def maxGreedSatisfied(self, g: list[int], s: list[int]) -> int:
+        g.sort() 
+        s.sort()
+        i = j = 0 
+        while i < len(g):
+            while j < len(s) and g[i] > s[j]:
+                j += 1
+            if j < len(s):
+                i+=1
+                j+=1 
+            else:
+                 break
+        return i 
+sol = Solution()
+g = [1,2,3]
+s = [1,1]
+print(sol.maxGreedSatisfied(g, s))
+
+sol = Solution()
+g = [1,2]
+s = [1,2,3]
+print(sol.maxGreedSatisfied(g, s))

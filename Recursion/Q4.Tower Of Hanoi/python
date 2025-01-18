@@ -1,0 +1,10 @@
+def tower_of_hanoi_moves(n):
+    # The number of moves required to solve the Tower of Hanoi puzzle
+    return 2**n - 1
+
+def main():
+    n = int(input("n = "))
+    print(tower_of_hanoi_moves(n))
+
+if __name__ == "__main__":
+    main()

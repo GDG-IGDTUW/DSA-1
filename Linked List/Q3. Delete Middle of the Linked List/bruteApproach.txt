@@ -1,0 +1,20 @@
+Algorithm:
+1. Find the length of linked list:
+    (a) Initialize a variable count = 0;
+    (b) Intialize a node 'temp' pointing to head of linked list.
+    (c) Run a loop till temp is not null 
+            i. Increment count
+            ii. Update temp to temp's next.
+
+2. Traverse again through linked list and if current index is equal to length of linked list / 2, then point temp to (temp's next)'s next:
+    (a) Intialize a variable index = 0;
+    (b) Update temp to head.
+    (c) Run a loop till temp is not null 
+            i. Increment index.
+            ii. If(index == count / 2):
+                    A. Point temp's next to (temp's next)'s next.
+                    B. Break out from loop
+            iii. Else
+                    A. Update temp to temp's next. 
+
+3. Return head of linked list.

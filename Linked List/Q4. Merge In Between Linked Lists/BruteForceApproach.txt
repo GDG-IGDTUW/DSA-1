@@ -1,0 +1,19 @@
+
+# Brute-force Approach
+
+### Problem Intuition:
+The goal of the problem is to merge `list2` into `list1` after removing the nodes from index `a` to index `b` (inclusive). The brute-force solution works by:
+1. Traversing `list1` until index `a-1` (the node before the removal section).
+2. Traversing `list1` again until index `b+1` (the node after the removal section).
+3. Connecting the node at `a-1` to the head of `list2`, and the last node of `list2` to the node at `b+1`.
+
+### Approach:
+1. **Find `pre` and `post`:** Traverse `list1` to identify the nodes at index `a-1` (`pre`) and index `b+1` (`post`).
+2. **Modify Links:**
+   - Set the `next` pointer of `pre` to the head of `list2`.
+   - Traverse `list2` to find its tail, and set its `next` pointer to `post`.
+3. **Return Modified List:** After the modification, return `list1`, which now has the merged content.
+
+### Time Complexity:
+- **Time Complexity:** O(N), where `N` is the number of nodes in `list1`. We traverse `list1` twice: once to find `pre` and `post`, and once to find the last node of `list2`.
+- **Space Complexity:** O(1), as no additional data structures are used, and only pointers are manipulated.

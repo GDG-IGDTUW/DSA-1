@@ -1,0 +1,32 @@
+# Brute Force Approach: Detailed Explanation
+
+## Problem Intuition:
+In this problem, we are given a singly linked list and an integer `x`. The goal is to reorder the list so that all nodes with values less than `x` appear before nodes with values greater than or equal to `x`. The relative order of the nodes in each partition must remain unchanged.
+
+## Approach:
+
+### 1. Separate Nodes into Two Lists:
+- Create two separate linked lists: 
+  - One for nodes with values less than `x`
+  - Another for nodes with values greater than or equal to `x`
+  
+- Traverse the original linked list. For each node:
+  - If its value is less than `x`, append it to the first list (`list1`).
+  - If its value is greater than or equal to `x`, append it to the second list (`list2`).
+
+### 2. Merge the Two Lists:
+- After traversing the entire list and populating both partitions, connect the tail of `list1` to the head of `list2`. This forms the desired partitioned list.
+
+### 3. Return the Modified List:
+- Return the head of `list1` as the result. This head now contains the reordered list.
+
+## Time Complexity:
+- **Time Complexity**: O(N), where `N` is the number of nodes in the linked list. We traverse the list twice: once to separate the nodes and once to merge the lists.
+- **Space Complexity**: O(N), because we create two new linked lists to hold the partitioned nodes.
+
+## Explanation of Time Complexity:
+- We perform two passes over the linked list:
+  1. First pass to separate nodes into two partitions.
+  2. Second pass to merge the lists.
+- Thus, the time complexity is linear with respect to the size of the linked list.
+

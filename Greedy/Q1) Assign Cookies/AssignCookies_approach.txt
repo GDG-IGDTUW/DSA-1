@@ -1,0 +1,23 @@
+* The goal is to maximize the number of children who can be assigned cookies and a child can be assigned a cookie 
+if and only if the cookie that is being given has size greater than or equal to the greed factor of child so that
+the child is satisfied.
+
+-> To maximize the number of children given cookies, we must ensure that the smaller cookies are checked for the children with 
+smaller greed factor so that less number of cookies remain which are not assigned to any children
+-> Hence, we use greedy approach and try to assign the maximum no. of cookies. For that, we sort both the arrays
+and check if a cookie can be assigned to a child by keeping Two Pointers on both the arrays first index
+-> If a child can be assigned a cookie, then we will move both the pointers and if we cant assign a cookie to 
+a child that means that the size of cookie is less than the greed factor of child => all the children after this
+child will also have a greater greed factor => therefore, they cannot be assigned the cookie as well=> Hence,
+we will move the pointer on size array
+
+For eg. greed={4,5,8,3,2}, size={3,2,1,4}
+
+--> after sorting arrays look like :
+    greed={2,3,4,5,8}, size={1,2,3,4}
+
+--> keep a left pointer on greed and right pointer on size
+--> we will move the left pinter as well as the right pointer if a cookie can be assigned
+and only right pointer if a cookie cant be assigned
+--> for eg. check if is 1>=2 => answer is NO => therefore, we will move r pointer to index 1
+    and check if is 2>=2 => YES => therfore, we will increment the counter that a child hhas been assigned a cookie and so on...

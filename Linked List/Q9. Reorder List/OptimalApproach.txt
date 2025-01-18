@@ -1,0 +1,34 @@
+# Optimal Solution 
+
+## Intuition:
+The optimal solution avoids using extra space by modifying the linked list in place. The strategy involves finding the middle of the list, reversing the second half, and then merging the two halves. By doing this in-place, we avoid the extra space usage that the brute-force solution requires.
+
+The key intuition is that the problem of reordering the list alternates between the nodes from the first and the last halves. This can be achieved by:
+- Finding the middle of the list, so that we can split it into two halves.
+- Reversing the second half, so that we can merge it with the first half while maintaining the required order.
+
+## Approach:
+
+### 1. Find the Middle of the List:
+- Use the slow and fast pointer technique to find the middle of the linked list. The slow pointer moves one step at a time, while the fast pointer moves two steps at a time. When the fast pointer reaches the end of the list, the slow pointer will be at the middle.
+
+### 2. Reverse the Second Half:
+- After finding the middle, split the list into two halves.
+- Reverse the second half of the list. This is done by iterating through the second half of the list and reversing the next pointers.
+
+### 3. Merge the Two Halves:
+- Use two pointers to merge the two halves of the list, alternating between the nodes from the first half and the reversed second half.
+- The pointer from the first half moves forward, and the pointer from the second half (reversed list) moves forward as well.
+
+### 4. Update Pointers:
+- As we merge, we need to make sure that the next pointers of the last nodes are correctly updated, especially to terminate the list.
+
+## Time Complexity:
+- O(N) for finding the middle of the list using the slow and fast pointer technique.
+- O(N/2) for reversing the second half of the list.
+- O(N/2) for merging the two halves.
+- Total time complexity is O(N).
+
+## Space Complexity:
+- The solution uses only a few pointers to traverse and reorder the list, meaning no extra space is used for storing nodes or lists.
+- Therefore, the space complexity is O(1).

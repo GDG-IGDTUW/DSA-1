@@ -1,0 +1,12 @@
+Optimal approach is by using "Tortoise Hare Algorithm"
+
+ALGORITHM:
+1. Initialise two pointers 'slow' and 'fast' to head.
+
+2. Initially, only 'fast' pointer will move till it crosses N nodes.
+
+3. After that both pointer will move simultaneously.
+
+4. Traverse the linked list till the 'fast' reaches last node. At this stage, 'slow' pointer is on (length - N)th node.
+
+5. Point the 'slow' pointer to (length - N + 2)th node effectively skipping Nth node from end.

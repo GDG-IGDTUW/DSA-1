@@ -1,0 +1,55 @@
+*The goal is to check if every character of string s is mapped to a unique character throughout 
+in string t
+
+Approach 1
+Solving using two HashMaps
+
+1. We initialize two HashMaps that store (key:value) pairs as character and integer values i.e 
+corresponding to every character in string s and string t, we store the index value in HashMap
+2. If the two strings are of different lengths, then definitely they are not isomorphic
+3. We iterate over the strings s and t, and in every iteration --> we check if the character in string s in present
+in map1, and if not we put it along with the index value. Similarly, we check if the character in string t is present
+in map2, and if not we put it along with the index value. Finally we check the frequency of the particular index
+value in map1 and map2, if they dont match, then they are not considered isomorphic.
+
+For eg : 
+s="egg" t="add"
+
+Iterations are as follows:
+           map1         map2
+i=0:      (e, 0)        (a, 0)
+i=1:      (g, 1)        (d, 1)
+i=2:      here we can see that both the characters g and d are already present in map1 and map2
+          Therefore, we check if they are corresponding to the same index value, that means that they are 
+          isomorphic strings and if there is a mismatch, tehy are not considered isomorphic.
+
+Time Complexity: O(n) as containsKey() fnc on an avg has TC =O(1)
+Space Complexity: O(n) as the two hashmaps can store at max n (key : value) pairs
+
+
+Approach 2
+// Without using HashMap
+Since, we know that corresponding to every character, there exists an ascii code value and in java, that ascii
+value gets implicitly converted into integer value, therefore it can be used as index in arrays
+Therefore, we can do bidirectional mapping making sure that characters are mapped to each other only by 
+initializing two integer arrays of size 256
+
+1. initialize the arrays a1 and a2
+2. If the length of strings dont match, then they are not isomorphic.
+3. iterate over the strings, check if (a1[s[i]]==0 && a2[t[i]]==0) i.e. if both are unmapped, then we'll 
+mark them as marked by placing t[i] value in a1[s[i]] and s[i] value in a2[t[i]]
+4. if the condition is not satisfied, that means either one or both the indexes are mapped, there we  will
+have to check that if the values are mapped correctly or not, if not we can directly declare strings as
+non-isomorphic.
+5. if the for loop ends, that means we can return true
+
+For eg.
+s="ega" t="add"
+i=0 : a1['e']=a1[ascii value of e]=a (a->e), a2['a']=a2[ascii value of a]=e (e->a)
+i=1 : a1['g']=d  a2['d']=g (g->d and d->g)
+i=2 : a1['a']=d  a2['d']=a  (a->d but d was previously mapped with value g i.e there came two values corresponding
+to a character in string t present in string s and that violates the definition of isomorphic strings, hence
+not isomorphic).
+
+Time Complexity : O(n)
+Space Complexity : O(2*256) == constant

@@ -1,0 +1,33 @@
+What is DFS?
+DFS is an abbreviation for Depth First Search.
+DFS is a traversal technique which involves the idea of recursion and backtracking. 
+DFS goes in-depth, i.e., traverses all nodes by going deep, and when there are no further nodes to traverse in the current path, then it backtracks on the same path and traverses other unvisited nodes. 
+
+Algorithm:
+    1. Input:
+        i. adjacencyList: A list of lists (2D array), where each list represents the neighbors of a node in the graph.
+
+    2. Initialization:
+        i. Create a stack st for storing nodes to be visited.
+        ii. Create a boolean array vis initialized to false, to keep track of visited nodes.
+        iii. Create an empty dfs list to store the nodes in the order they are visited.
+    
+    3. Start DFS from Node 0:
+        i. Push the starting node (node 0) into the stack.
+
+    4. Process the Stack:
+        i. While the stack is not empty:
+            (a) Pop a node from the stack and store it in a variable node.
+            (b) If node has already been visited (vis[node] == true), skip it and continue to the next iteration.
+            (c) Mark node as visited (vis[node] = true).
+            (d) Add node to the dfs list.
+
+    5. Visit Neighbors:
+        i. For each neighbor of the current node (in reverse order):
+            (a) If the neighbor has not been visited, push it into the stack for later exploration.
+
+    6. Repeat Steps 4 and 5:
+        i. Continue this process until the stack becomes empty.
+
+    7. Return Result:
+        i. Once the stack is empty, return the dfs list, which contains the nodes in the order they were visited.

@@ -1,0 +1,44 @@
+# Optimal Approach: Detailed Explanation
+
+## Problem Intuition:
+In this approach, we aim to solve the problem in a more space-efficient way without creating extra linked lists. Instead of allocating additional space for the partitioned nodes, we will rearrange the nodes within the original list using only pointers.
+
+The goal is to traverse the list only once, while maintaining two separate partitions, and then link the partitions efficiently in one go.
+
+## Approach:
+
+### 1. Maintain Two Partitions:
+- Create two dummy nodes: 
+  - `left` to hold the partition for values less than `x`.
+  - `right` to hold the partition for values greater than or equal to `x`.
+  
+- Use two pointers, `leftTail` and `rightTail`, to keep track of the last nodes in the left and right partitions as we traverse the original list.
+
+### 2. Traverse the Original List:
+- Traverse the original linked list node by node.
+- For each node:
+  - If its value is less than `x`, append the node to the left partition.
+  - If its value is greater than or equal to `x`, append the node to the right partition.
+  
+- Keep updating the `leftTail` and `rightTail` pointers to ensure that the partitions remain intact.
+
+### 3. Merge the Partitions:
+- After traversing the entire list, link the tail of the left partition to the head of the right partition.
+- Set `rightTail->next` to `null` to properly terminate the merged list.
+
+### 4. Return the Modified List:
+- Return the next node of the dummy left node as the head of the partitioned list.
+
+## Time Complexity:
+- **Time Complexity**: O(N), where `N` is the number of nodes in the linked list. We only traverse the list once to build the partitions and then merge them in constant time.
+
+- **Space Complexity**: O(1), because we are only manipulating pointers and do not create additional linked lists. The space usage remains constant.
+
+## Explanation:
+- We perform a single pass over the linked list, which gives us a linear time complexity of O(N). Additionally, no extra space is used to store nodes, so the space complexity is O(1).
+
+## Final Thoughts:
+- The brute-force approach is straightforward but requires extra space to store the two partitions, making it less efficient in terms of memory usage.
+- The optimal approach minimizes space usage by rearranging the nodes in-place, making it more efficient in terms of both time and space, especially when working with large linked lists.
+- By using the optimal approach, you can solve the problem efficiently without the need for additional space while maintaining the partitioning constraints.
+
