@@ -1,0 +1,19 @@
+class Solution:
+    def getMaxXor(self, nums: list[int], maximumBit: int) -> list[int]:
+        xor = 0 
+        for n in nums:
+            xor^= n
+            masks = (1 << maximumBit) - 1
+            answer= []
+            for n in reversed(nums):
+                answer.append(xor ^ masks)
+                xor ^=n
+            return answer
+sol = Solution()
+nums = [0, 1, 1, 3] 
+maximumBit = 2
+print(sol.getMaxXor(nums, maximumBit))
+
+nums = [2, 3, 4, 7] 
+maximumBit = 3
+print(sol.getMaxXor(nums, maximumBit))
