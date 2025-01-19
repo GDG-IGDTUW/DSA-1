@@ -1,0 +1,29 @@
+class Solution:
+    def CombinationSum(self, candidates: list[int], target: int) -> list[list[int]]:
+        result = []
+        def dfs(i, current, total): #depth first seach fuction to dtermine the recussive flow
+            if total == target: # If total exceeds target, stop exploring further
+                result.append(current.copy()) #current copy to continue to use the variable in the recursive flow
+                return
+            if i >= len(candidates) or total > target:
+                return
+            current.append(candidates[i])
+            dfs(i, current, total + candidates[i])
+            current.pop()
+            dfs(i + 1, current, total) # Move to the next candidate (exclude current index)
+        dfs(0, [], 0) # Start DFS from index 0, empty current combination, and total 0
+        return result
+sol = Solution()
+candidates = [2,3,6,7]
+target = 7
+print(sol.CombinationSum(candidates, target))
+
+sol = Solution()
+candidates = [2,3,5]
+target = 8
+print(sol.CombinationSum(candidates, target))
+
+sol = Solution()
+candidates = [2] 
+target = 1
+print(sol.CombinationSum(candidates, target))
