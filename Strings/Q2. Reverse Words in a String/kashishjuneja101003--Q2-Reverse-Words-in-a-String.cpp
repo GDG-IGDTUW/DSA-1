@@ -1,34 +1,49 @@
 #include <iostream>
-#include <string.h>
 #include <algorithm>
+#include <vector>
 using namespace std;
-string reverseWords(string s){
+
+string reverseWords(string s)
+{
     int n = s.length();
 
-    string news = "";
+    vector<string> vec;
 
-    reverse(s.begin(), s.end());
-
-    for (int i = 0; i < n; i++){
-        string word = "";
-        while (i < n && s[i] != ' '){
-            word += s[i];
-            i++;
+    string word = "";
+    for (int i = 0; i < n; i++)
+    {
+        if (s[i] == ' ')
+        {
+            if (word != "")
+            {
+                vec.push_back(word);
+            }
+            word = "";
+            continue;
         }
-
-        if (word.size() > 0){
-            reverse(word.begin(), word.end());
-            news += " " + word;
-        }
+        word += s[i];
     }
 
-    return news.substr(1);
+    if (word != "")
+        vec.push_back(word);
+
+    reverse(vec.begin(), vec.end());
+
+    string news = "";
+    for (int i = 0; i < vec.size(); i++)
+    {
+        news += vec[i];
+        if (i != vec.size() - 1)
+            news += " ";
+    }
+
+    return news;
 }
 
-
-int main(){
+int main()
+{
     string s = "Hello, How are you?";
 
-    cout<<reverseWords(s);
+    cout << "Reversed String: "<<reverseWords(s);
     return 0;
 }
