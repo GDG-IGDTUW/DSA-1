@@ -1,0 +1,87 @@
+public class MergeInBetweenLinkedLists {
+    public ListNode mergeInBetween(ListNode list1, int a, int b, ListNode list2) {
+        ListNode nodeBeforeA = list1;
+        for (int i = 0; i < a - 1; ++i)
+            nodeBeforeA = nodeBeforeA.next;
+
+        ListNode nodeB = nodeBeforeA.next;
+        for (int i = 0; i < b - a; ++i)
+            nodeB = nodeB.next;
+
+        nodeBeforeA.next = list2;
+        ListNode lastNodeInList2 = list2;
+
+        while (lastNodeInList2.next != null)
+            lastNodeInList2 = lastNodeInList2.next;
+
+        lastNodeInList2.next = nodeB.next;
+        nodeB.next = null;
+
+        return list1;
+    }
+
+    // Helper method to convert an array to a linked list
+    public static ListNode arrayToLinkedList(int[] arr) {
+        if (arr.length == 0) return null;
+
+        ListNode head = new ListNode(arr[0]);
+        ListNode current = head;
+
+        for (int i = 1; i < arr.length; i++) {
+            current.next = new ListNode(arr[i]);
+            current = current.next;
+        }
+
+        return head;
+    }
+
+    // Helper method to print a linked list
+    public static void printLinkedList(ListNode head) {
+        while (head != null) {
+            System.out.print(head.val + " ");
+            head = head.next;
+        }
+        System.out.println();
+    }
+
+    
+    public static void main(String[] args) {
+        MergeInBetweenLinkedLists solution = new MergeInBetweenLinkedLists();
+
+        // Test Case 1
+        int[] list1Arr = {0, 1, 2, 3, 4, 5};
+        int[] list2Arr = {1000000, 1000001, 1000002};
+        ListNode list1 = arrayToLinkedList(list1Arr);
+        ListNode list2 = arrayToLinkedList(list2Arr);
+        int a = 3, b = 4;
+
+        ListNode result = solution.mergeInBetween(list1, a, b, list2);
+        printLinkedList(result); // Output: 0 1 2 1000000 1000001 1000002 5
+
+        // Test Case 2
+        list1Arr = new int[]{0, 1, 2, 3, 4, 5, 6};
+        list2Arr = new int[]{10, 20, 30, 40};
+        list1 = arrayToLinkedList(list1Arr);
+        list2 = arrayToLinkedList(list2Arr);
+        a = 2;
+        b = 5;
+
+        result = solution.mergeInBetween(list1, a, b, list2);
+        printLinkedList(result); // Output: 0 1 10 20 30 40 6
+    }
+}
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {}
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
+}
