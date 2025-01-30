@@ -1,0 +1,37 @@
+Optimal Approach is by using "Two Pointer Approach"
+
+INTUITION:
+We need a minimum of leftMax and rightMax. So, if we take the case when arr[start] <= arr[end], we increment start, so, we can surely say that there is a block with height more than arr[start] to the right of start.
+
+And for the same reason, when arr[end] <= arr[start], we can surely say that there is a block to the left of end which is at least of arr[end].
+
+So, by traversing these cases and using two-pointer approach, the time complexity can be decresed without any extra space.
+
+ALGORITHM:
+1. Take 2 pointers, start and end pointing to 0th and (n - 1)th index respectively.
+
+2. Take 2 variables, leftMAx and rightMax initialised to 0.
+
+3. If arr[start] <= arr[end]
+    (a) If leftMax is not equal to 0
+        (A) Then update leftMax with max of leftMax and arr[start].
+
+        (B) Increment amount by (leftMax - arr[start]).
+    
+    (b) Else
+        (A) Update leftMax to arr[start].
+    
+    (c) Increment start.
+
+4. Else (This implies arr[end] > arr[start]).
+    (a) If rightMax is not equal to 0
+        (A) Then update rightMax with the max of rightMax and arr[end].
+
+        (B) Increment amount by (rightMax - arr[end]).
+    
+    (b) Else
+        (A) Update rightMax to arr[end].
+
+    (c) Decrement end.
+
+5. Return amount.

@@ -1,0 +1,6 @@
+Better approach solves the problem using precomputed left and right maximums.
+
+It uses two additional arrays for storing leftMax and rightMax.
+
+TC - O(3N)
+SC - O(2N)

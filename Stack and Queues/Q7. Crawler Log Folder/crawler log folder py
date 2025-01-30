@@ -1,0 +1,15 @@
+class Solution:
+    def minOperations(self, logs: list[str]) -> int:
+        res = 0 #result
+        for log in logs:
+            if log == "./":
+                continue
+            elif log == "../":
+                res = max(0, res - 1)
+            else:
+                res += 1  # for the case of directory name, increase count
+        return res
+    
+sol = Solution()
+logs = ["d1/","d2/","../","d21/","./"]
+print(sol.minOperations(logs))

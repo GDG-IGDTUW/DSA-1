@@ -1,0 +1,11 @@
+Trapping Rainwater problem is a classic algorithmic challenge that asks how much water can be trpped between the bars of varying heights after a rainstorm.
+Water can only be stored above a bar if it is surrounded by taller bars on both left and right sides. 
+The amount of water stored depends on the shorter height of these two bars because water spills over the shorter one.
+
+Numerically, water at Ith index = 
+    water[i] = min(leftMax[i], rightMax[i]) - height[i]
+
+where:
+    leftMax[i] = max height of bars to the left of i
+    rightMax[i] = max height of bars to the right of i
+    height[i] = height of current bar

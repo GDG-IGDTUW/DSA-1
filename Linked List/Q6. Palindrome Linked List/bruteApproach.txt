@@ -1,0 +1,8 @@
+ALGORITHM:
+1. Create an empty stack.
+
+2. Iterate in linked list and add every value in stack.
+
+3. Start iterating again.
+
+4. If the temp value is not equal to the last element of the stack, then return false. Otherwise return true.

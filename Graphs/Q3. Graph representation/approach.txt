@@ -1,0 +1,16 @@
+Algorithm Explanation:
+
+    1. Input Parameters:
+            (a) V: Number of vertices.
+            (b) E: Number of edges.
+            (c) edges: An array of size E x 2, where each subarray contains two integers representing an edge between two vertices.
+
+    2. Adjacency List Construction:
+            (a) Create an empty ArrayList of ArrayList<Integer> to represent the graph.
+
+            (b) Initialize V empty lists, one for each vertex.
+
+            (c) For each edge [i, j], add j to the adjacency list of i and i to the adjacency list of j (since this is an undirected graph).
+
+    4. Display the Adjacency List:
+            (a) Iterate through the adjacency list and print the connected vertices for each vertex.

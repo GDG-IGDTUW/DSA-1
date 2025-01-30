@@ -1,0 +1,8 @@
+ALGORITHM:
+1. Create an ArrayList.
+
+2. First add odd-indexed elements to list.
+
+3. Then, add even-indexed elements to list.
+
+4. Finally, replace the values oflinked list with values of ArrayList.

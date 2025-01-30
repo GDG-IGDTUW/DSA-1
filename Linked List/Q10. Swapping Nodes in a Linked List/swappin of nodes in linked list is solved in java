@@ -1,0 +1,53 @@
+class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode(int val) {
+        this.val = val;
+        this.next = null;
+    }
+}
+
+public class SwapKthNodes {
+    public ListNode swapNodes(ListNode head, int k) {
+        ListNode first = head, second = head, temp = head;
+        int n = 0;
+
+        while (temp != null) {
+            n++;
+            if (n == k) {
+                first = temp;
+            }
+            temp = temp.next;
+        }
+
+        int steps = n - k;
+        while (steps-- > 0) {
+            second = second.next;
+        }
+
+        int t = first.val;
+        first.val = second.val;
+        second.val = t;
+
+        return head;
+    }
+
+    public static void main(String[] args) {
+        SwapKthNodes solution = new SwapKthNodes();
+
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
+
+        int k = 2;
+        ListNode result = solution.swapNodes(head, k);
+
+        while (result != null) {
+            System.out.print(result.val + " ");
+            result = result.next;
+        }
+    }
+}
