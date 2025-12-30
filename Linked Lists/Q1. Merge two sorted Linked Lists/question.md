@@ -11,4 +11,4 @@ Output: [1,1,2,3,4,4]
 
 Link to Question : https://leetcode.com/problems/merge-two-sorted-lists/description/
 
-Provide a screenshot of the accepted solution on LeetCode, including the left pane.
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution. 
