@@ -14,4 +14,6 @@ Output: true
 
 Explanation: There is a cycle in the linked list, where the tail connects to the 1st node (0-indexed).
 
+Link to question: https://leetcode.com/problems/linked-list-cycle/description/
+
 Provide a screenshot of the accepted solution on Leetcode, including the left pane in the description of pull request and push the solution.
