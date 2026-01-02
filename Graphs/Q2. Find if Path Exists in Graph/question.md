@@ -14,6 +14,6 @@ Explanation: There are two paths from vertex 0 to vertex 2:
 <img width="240" height="192" alt="image" src="https://assets.leetcode.com/uploads/2021/08/14/validpath-ex1.png" />
 
 
-Link to Question : https://leetcode.com/problems/number-of-provinces/description/
+Link to Question : https://leetcode.com/problems/find-if-path-exists-in-graph/description/
 
 Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution. 
