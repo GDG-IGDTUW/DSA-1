@@ -8,3 +8,4 @@ Input: nums = [4,5,6,7,0,1,2], target = 0
 Output: 4
 
 Problem Link: https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
