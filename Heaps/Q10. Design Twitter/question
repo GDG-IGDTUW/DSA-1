@@ -1,0 +1,12 @@
+Design a simplified version of Twitter where users can post tweets, follow/unfollow another user, and is able to see the 10 most recent tweets in the user's news feed.
+
+Example 1:
+
+Input
+["Twitter", "postTweet", "getNewsFeed", "follow", "postTweet", "getNewsFeed", "unfollow", "getNewsFeed"]
+[[], [1, 5], [1], [1, 2], [2, 6], [1], [1, 2], [1]]
+Output
+[null, null, [5], null, null, [6, 5], null, [5]]
+
+Link to Problem: https://leetcode.com/problems/design-twitter/description/
+Provide a screenshot of the accepted solution on Leetcode, including the left pane in the description of pull request and push the solution.
