@@ -1,5 +1,7 @@
 # Q7. Find the Duplicate Number
 
+LeetCode: [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+
 Given an array of integers `nums` containing `n + 1` integers where each integer is in the range `[1, n]` inclusive, there is exactly one repeated number in `nums`.
 
 Return the repeated number. You must solve the problem without modifying the array and using only constant extra space.

@@ -1,5 +1,7 @@
 # Q4. Maximum Product of Two Elements in an Array
 
+LeetCode: [Maximum Product of Two Elements in an Array](https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/)
+
 Given the integer array `nums`, choose two distinct indices `i` and `j` such that `(nums[i] - 1) * (nums[j] - 1)` is maximized.
 
 Return the maximum possible value of `(nums[i] - 1) * (nums[j] - 1)`.
