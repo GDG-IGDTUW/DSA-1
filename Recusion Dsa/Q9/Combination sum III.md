@@ -13,3 +13,7 @@ Output: [[1,2,4]]
 Explanation:
 1 + 2 + 4 = 7
 There are no other valid combinations.
+
+Guildlines
+
+Provide a screenshot of the accepted solution on Leetcode, including the left pane in the description of pull request and push the solution.
