@@ -8,3 +8,7 @@ Example 1:
 
 Input: nums = [1,2,3]
 Output: [[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]
+
+Guildlines
+
+Provide a screenshot of the accepted solution on Leetcode, including the left pane in the description of pull request and push the solution.
