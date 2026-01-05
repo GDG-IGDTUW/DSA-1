@@ -15,3 +15,7 @@ Output:
 [1,7],
 [2,6]
 ]
+
+Guildlines
+
+Provide a screenshot of the accepted solution on Leetcode, including the left pane in the description of pull request and push the solution.
