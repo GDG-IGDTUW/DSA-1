@@ -7,3 +7,6 @@ Given an integer n, return the total number of good digit strings of length n. A
 
 A digit string is a string consisting only of the digits '0' through '9'. It may contain leading zeros.
 
+Guildlines
+
+Provide a screenshot of the accepted solution on Leetcode, including the left pane in the description of pull request and push the solution.
