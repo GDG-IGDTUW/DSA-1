@@ -1,4 +1,5 @@
 Leetcode: https://leetcode.com/problems/string-to-integer-atoi/description/
+
 Implement the myAtoi(string s) function, which converts a string to a 32-bit signed integer.
 
 The algorithm for myAtoi(string s) is as follows:
@@ -30,4 +31,6 @@ Constraints:
 0 <= s.length <= 200
 s consists of English letters (lower-case and upper-case), digits (0-9), ' ', '+', '-', and '.'.
 
+Guildlines
+Provide a screenshot of the accepted solution on Leetcode, including the left pane in the description of pull request and push the solution.
 
