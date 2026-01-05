@@ -9,3 +9,7 @@ Example 2:
 
 Input: n = 1
 Output: ["()"]
+
+Guildlines
+
+Provide a screenshot of the accepted solution on Leetcode, including the left pane in the description of pull request and push the solution.
