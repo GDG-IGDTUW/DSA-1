@@ -21,3 +21,6 @@ Return the maximum profit you can achieve from this transaction. If you cannot a
 - `1 <= prices.length <= 10^5`
 - `0 <= prices[i] <= 10^4`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
