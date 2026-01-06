@@ -32,6 +32,8 @@ Input Tree:
     4   5 6   7
 
 ```
+
+link to q: https://www.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1
 Input: root = [1,2,3,4,5,6,7]
 
 Output: [4,2,5,7]
