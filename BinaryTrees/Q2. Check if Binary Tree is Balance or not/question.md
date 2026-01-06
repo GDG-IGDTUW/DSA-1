@@ -41,3 +41,5 @@ Output: false
 Input: root = []
 
 Output: true
+
+link to q: https://leetcode.com/problems/balanced-binary-tree/
