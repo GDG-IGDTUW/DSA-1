@@ -73,3 +73,5 @@ Output: [[4],[2],[1,5,6],[3],[7]]
 Explanation:
 This case is the exact same as example 2, but with nodes 5 and 6 swapped.
 Note that the solution remains the same since 5 and 6 are in the same location and should be ordered by their values.
+
+link to q: https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
