@@ -30,3 +30,5 @@ Output: [[1]]
 
 Input: root = []
 Output: []
+
+link to q: https://leetcode.com/problems/binary-tree-level-order-traversal/
