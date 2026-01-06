@@ -19,3 +19,6 @@ Note that you must do this in-place without making a copy of the array.
 - `1 <= nums.length <= 10^4`
 - `-2^31 <= nums[i] <= 2^31 - 1`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
