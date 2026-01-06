@@ -21,3 +21,6 @@ Given an integer array `nums`, find the contiguous subarray (containing at least
 - `1 <= nums.length <= 10^5`
 - `-10^4 <= nums[i] <= 10^4`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
