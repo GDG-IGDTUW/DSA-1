@@ -20,3 +20,6 @@ Given an integer array `nums`, rotate the array to the right by `k` steps, where
 - `-2^31 <= nums[i] <= 2^31 - 1`
 - `0 <= k <= 10^5`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
