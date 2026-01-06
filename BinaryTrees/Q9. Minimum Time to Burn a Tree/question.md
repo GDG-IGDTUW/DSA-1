@@ -33,3 +33,5 @@ At 3 sec: Nodes 1 and 4 catches fire.
 At 4 sec: Node 3 and 8 catches fire.
 At 5 sec: Node 7 catches fire.
 It takes 5s to burn the complete tree.
+
+link to q: https://www.geeksforgeeks.org/problems/burning-tree/1
