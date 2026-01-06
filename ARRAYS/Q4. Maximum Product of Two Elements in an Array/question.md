@@ -24,3 +24,6 @@ Return the maximum possible value of `(nums[i] - 1) * (nums[j] - 1)`.
 - `2 <= nums.length <= 500`
 - `1 <= nums[i] <= 10^3`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
