@@ -30,3 +30,5 @@ Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of 
 
 Input: root = [1,2], p = 1, q = 2
 Output: 1
+
+link to q: https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/
