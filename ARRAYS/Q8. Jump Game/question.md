@@ -21,3 +21,6 @@ Return `true` if you can reach the last index, or `false` otherwise.
 - `1 <= nums.length <= 10^4`
 - `0 <= nums[i] <= 10^5`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
