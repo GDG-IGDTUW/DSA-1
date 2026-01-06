@@ -19,4 +19,8 @@ Given an integer array `flowerbed` containing `0`s and `1`s, where `0` means emp
 - `1 <= flowerbed.length <= 2 * 10^4`
 - `flowerbed[i]` is `0` or `1`
 - No two adjacent flowers are planted in `flowerbed`
+
 - `0 <= n <= flowerbed.length`
+
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
