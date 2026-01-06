@@ -6,19 +6,20 @@ Welcome to the *DSA-1 Repository, your go-to collection for mastering **Data Str
 
 ## 📂 *Topics Covered*  
 
-The repository is structured into folders, each dedicated to a specific DSA topic. Inside each folder, you will find curated questions designed to challenge your understanding and problem-solving skills.  
-1. *Arrays* 
-2. *Binary search*
-3. *Strings* 
-4. *Linked Lists* 
-5. *Hashmap*
-6. *Recursion*
-7. *Stacks and Queues* 
-8. *Heaps*
-9. *Greedy*
-10. *Trees* 
-11. *Graphs*  
-12. *Dynamic Programming*
+The repository is structured into folders, each dedicated to a specific DSA topic. Each topic is mapped to one or more collaborators who oversee that section, and guide contributors.Inside each folder, you will find curated questions designed to challenge your understanding and problem-solving skills.  
+
+1. *Arrays* -> [Akriti](https://github.com/aakriti1613), [Jiya](https://github.com/JiyaKapoor)
+2. *Binary search* -> [Jiya](https://github.com/JiyaKapoor)
+3. *Strings* -> [Mishka](https://github.com/mishka832)
+4. *Linked Lists* -> [Nandani](https://github.com/NandiniAggarwal)
+5. *Hashmap* -> [Mishka](https://github.com/mishka832)
+6. *Recursion* -> [Shriya](https://github.com/CodershriyaMishra)
+7. *Stacks and Queues* -> [Sakshi](https://github.com/sakshiigdtuw)
+8. *Heaps* -> [Sakshi](https://github.com/sakshiigdtuw), [Sakshi](https://github.com/sakshii2005)
+9. *Greedy* -> [Sakshi](https://github.com/sakshii2005)
+10. *Trees* -> [Palak Khanna](https://github.com/palak-khanna)
+11. *Graphs* -> [Saniya](https://github.com/SANIYAISGOD) 
+12. *Dynamic Programming* -> [Shambhavi](https://github.com/shambhavi2177)
 ---
 
 ## 🛠️ *How to Use This Repository?*  
