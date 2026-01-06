@@ -31,3 +31,6 @@ Output: [[1]]
 Input: root = []
 
 Output: true
+
+
+link to q: https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/
