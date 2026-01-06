@@ -40,3 +40,5 @@ Output: [40, 20, 10, 30, 100]
 Explanation:
 This case is the exact same as example 2, but with nodes 5 and 6 swapped.
 Note that the solution remains the same since 5 and 6 are in the same location and should be ordered by their values.
+
+link to q: https://www.geeksforgeeks.org/problems/top-view-of-binary-tree/1
