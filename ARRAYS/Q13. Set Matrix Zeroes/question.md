@@ -19,3 +19,6 @@ Given an `m x n` integer matrix `matrix`, if an element is `0`, set its entire r
 - `1 <= m, n <= 200`
 - `-2^31 <= matrix[i][j] <= 2^31 - 1`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
