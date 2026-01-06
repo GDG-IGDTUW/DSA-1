@@ -21,3 +21,6 @@ Return the repeated number. You must solve the problem without modifying the arr
 - `1 <= nums[i] <= n`
 - All the integers in `nums` appear only once except for precisely one integer which appears two or more times.
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
