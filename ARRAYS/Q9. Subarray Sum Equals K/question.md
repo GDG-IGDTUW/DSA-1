@@ -18,3 +18,6 @@ Given an array of integers `nums` and an integer `k`, return the total number of
 - `-1000 <= nums[i] <= 1000`
 - `-10^7 <= k <= 10^7`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
