@@ -1,4 +1,4 @@
-# 🌟 *DSA-1 Repository* 🌟  
+#  *DSA-1 Repository*  
 
 Welcome to the *DSA-1 Repository, your go-to collection for mastering **Data Structures and Algorithms*! This repository contains categorized DSA topics with corresponding questions to help you learn, practice, and excel in coding interviews and assessments.  
 
