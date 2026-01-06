@@ -24,3 +24,6 @@ You may imagine that `nums[-1] = nums[n] = -∞`. You must write an algorithm th
 - `-2^31 <= nums[i] <= 2^31 - 1`
 - `nums[i] != nums[i + 1]` for all valid `i`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
