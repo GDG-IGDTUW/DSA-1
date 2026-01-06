@@ -19,3 +19,6 @@ Given an array `nums` of integers, return the count of numbers that contain an e
 - `1 <= nums.length <= 500`
 - `1 <= nums[i] <= 10^5`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
