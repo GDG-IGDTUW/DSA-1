@@ -22,6 +22,7 @@ Explanation: Another accepted tree is:
 ### Example 2:
 Input: root = [40,20,60,10,30,50,70], val = 25
 
+link to q: https://leetcode.com/problems/insert-into-a-binary-search-tree/
 Output: [40,20,60,10,30,50,70,null,null,25]
 
 ### Eample 3:
