@@ -19,3 +19,6 @@ Given an `m x n` matrix, return all elements of the matrix in spiral order.
 - `1 <= m, n <= 10`
 - `-100 <= matrix[i][j] <= 100`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
