@@ -39,3 +39,6 @@ Input: root = [-10,9,20,null,null,15,7]
 Output: 42
 
 Explanation: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42.
+
+
+link to q: https://leetcode.com/problems/binary-tree-maximum-path-sum/
