@@ -20,3 +20,6 @@ You must write an algorithm that runs in `O(n)` time and does not use the divisi
 - `-30 <= nums[i] <= 30`
 - The product of any prefix or suffix of `nums` fits in a 32-bit integer.
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
