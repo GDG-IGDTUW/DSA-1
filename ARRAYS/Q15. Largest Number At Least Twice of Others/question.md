@@ -21,3 +21,6 @@ Find whether the largest element in the array is at least twice as much as every
 - `1 <= nums.length <= 50`
 - `0 <= nums[i] <= 100`
 
+## NOTE
+Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
