@@ -11,7 +11,7 @@ The repository is structured into folders, each dedicated to a specific DSA topi
 1. *Arrays* -> [Akriti](https://github.com/aakriti1613), [Jiya](https://github.com/JiyaKapoor)
 2. *Binary search* -> [Jiya](https://github.com/JiyaKapoor)
 3. *Strings* -> [Mishka](https://github.com/mishka832)
-4. *Linked Lists* -> [Nandani](https://github.com/NandiniAggarwal)
+4. *Linked Lists* -> [Nandani](https://github.com/NandaniAggarwal)
 5. *Hashmap* -> [Mishka](https://github.com/mishka832)
 6. *Recursion* -> [Shriya](https://github.com/CodershriyaMishra)
 7. *Stacks and Queues* -> [Sakshi](https://github.com/sakshiigdtuw)
