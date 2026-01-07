@@ -85,7 +85,7 @@ Feel free to reach out if you have any questions or concerns:
 - [Shanvi](https://github.com/Shanvi2005) 
 
 ## 🤝 *Collaborators*
-[Mishka](https://github.com/mishka832),[Sakshi](https://github.com/sakshii2005),[Saniya](https://github.com/SANIYAISGOD),[Jiya](https://github.com/JiyaKapoor),[Sakshi](https://github.com/sakshiigdtuw),[Shambhavi](https://github.com/shambhavi2177),[Shriya](https://github.com/CodershriyaMishra),[Akriti](https://github.com/aakriti1613),[Palak Khanna](https://github.com/palak-khanna),[Nandani](https://github.com/NandiniAggarwal)
+[Mishka](https://github.com/mishka832),[Sakshi](https://github.com/sakshii2005),[Saniya](https://github.com/SANIYAISGOD),[Jiya](https://github.com/JiyaKapoor),[Sakshi](https://github.com/sakshiigdtuw),[Shambhavi](https://github.com/shambhavi2177),[Shriya](https://github.com/CodershriyaMishra),[Akriti](https://github.com/aakriti1613),[Palak Khanna](https://github.com/palak-khanna),[Nandani](https://github.com/NandaniAggarwal)
 
 
 Let’s learn and grow together! 🚀
