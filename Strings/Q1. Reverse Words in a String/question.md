@@ -10,3 +10,8 @@ Output: "blue is sky the"
 Link to question : https://leetcode.com/problems/reverse-words-in-a-string/
 
 Provide a screenshot of the accepted solution on Leetcode, including the left pane in the description of pull request and push the solution.
+
+//this code is in python
+s.strip()
+words = s.split()
+return ' '.join(reversed(words))
