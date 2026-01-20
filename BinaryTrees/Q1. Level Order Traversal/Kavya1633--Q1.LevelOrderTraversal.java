@@ -3,7 +3,7 @@ class Solution {
 
     public List<List<Integer>> levelOrder(TreeNode root) {
         // to add traversal
-        List<List<Integer>> ans=new ArrayList<List<Integer>>();
+        List<List<Integer>> result=new ArrayList<List<Integer>>();
         Queue<TreeNode> queue=new LinkedList<TreeNode>();
 
         // check if root==null (no tree)
@@ -28,9 +28,9 @@ class Solution {
                 list.add(queue.remove().val);
             }
             // adding the level traversal into the ans list
-            ans.add(list);
+            result.add(list);
         }
-        return ans;
+        return result;
 
     }
 }
