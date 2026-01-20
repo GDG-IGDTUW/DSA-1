@@ -7,7 +7,7 @@ class Solution {
         Queue<TreeNode> queue=new LinkedList<TreeNode>();
 
         // check if root==null (no tree)
-        if(root==null) return ans;
+        if(root==null) return result;
 
         // add the root node
         queue.add(root);
