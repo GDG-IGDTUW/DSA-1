@@ -14,4 +14,5 @@ Provide a screenshot of the accepted solution on Leetcode, including the left pa
 //this code is in python
 s.strip()
 words = s.split()
+
 return ' '.join(reversed(words))
