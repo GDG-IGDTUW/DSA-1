@@ -1,0 +1,35 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+
+        // We use an unordered_map to reduce time complexity to average O(n),
+        // where n = nums.size().
+        // unordered_map stores (value -> index) pairs for fast lookup.
+        unordered_map<int,int> mpp;
+
+        int n = nums.size();
+
+        for (int i = 0; i < n; i++) {
+
+            int currentElement = nums[i];
+
+            // Compute the number needed so that
+            // currentElement + needed = target.
+            int needed = target - currentElement;
+
+            // If the needed value is already in the map,
+            // we have found a pair that sums up to target.
+            if (mpp.find(needed) != mpp.end()) {
+                return { mpp[needed], i };
+            }
+
+            // Otherwise, store this element and its index
+            // in the map for future lookup.
+            mpp[currentElement] = i;
+        }
+
+        // Return {-1, -1} if no valid pair is found.
+        // (Given problem constraints guarantee there will be one.)
+        return { -1, -1 };
+    }
+};
