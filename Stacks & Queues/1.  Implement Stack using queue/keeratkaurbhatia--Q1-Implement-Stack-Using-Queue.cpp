@@ -1,3 +1,6 @@
+//Overall SC : O(n)
+//TC's mentioned against the functions
+
 /*
 Approach:
 1. stacks have insertion and deletion from the same end, 
@@ -13,7 +16,7 @@ private:
 public:
     MyStack() {}
 
-    void push(int x) //TC = O(n) SC = O(n) 
+    void push(int x) //TC = O(n) extra SC = O(1) 
     {
         q.push(x); //first push to the rear
         int n = q.size();
@@ -26,7 +29,7 @@ public:
         }
     }
 
-    int pop() //TC = O(1) SC = O(n)
+    int pop() //TC = O(1) extra SC = O(1)
     {
         //deletion happening from the front (tos)
         int top = q.front();
@@ -34,12 +37,12 @@ public:
         return top;
     }
 
-    int top() //TC = O(1) SC = O(n)
+    int top() //TC = O(1) extra SC = O(1)
     {
         return q.front();
     }
 
-    bool empty() //TC = O(1) SC = O(n)
+    bool empty() //TC = O(1) extra SC = O(1)
     {
         return q.empty();
     }
