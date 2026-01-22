@@ -24,3 +24,6 @@ Given an integer array `flowerbed` containing `0`s and `1`s, where `0` means emp
 
 ## NOTE
 Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+
+## solution
+
