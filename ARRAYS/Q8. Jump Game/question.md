@@ -23,4 +23,25 @@ Return `true` if you can reach the last index, or `false` otherwise.
 
 ## NOTE
 Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+        int maxjump = 0;
+        int nums_size=nums.size();
+
+    for (int i = 0; i < nums.size(); i++) {
+        
+        if (i > maxjump) {
+            return false;
+        }
+
+       
+        if (i + nums[i] > maxjump) {
+            maxjump = i + nums[i];
+        }
+    }
+
+    return true;
+    }
+};
 
