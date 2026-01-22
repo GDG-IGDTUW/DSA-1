@@ -26,4 +26,30 @@ You may imagine that `nums[-1] = nums[n] = -∞`. You must write an algorithm th
 
 ## NOTE
 Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+class Solution {
+public:
+    int findPeakElement(vector<int>& nums) {
+        int size=nums.size();
+        if(size==1)
+        {
+            return 0;
+        }
+        if(nums[1]<nums[0])
+        {
+            return 0; 
+        }
+        if(nums[size-2]<nums[size-1])
+        {
+            return (size-1); 
+        }
+        for(int i=1;i<=(size-2);i++)
+        {
+            if(nums[i]>nums[i+1] && nums[i]>nums[i-1])
+            {
+                return i;
+            }
+        }
+        return -1;
+    }
+};
 
