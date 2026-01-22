@@ -9,7 +9,7 @@ public:
                 start=mid+1;
             }
             else{
-                end=mid-1;
+                end=mid;
             }
         }
         return nums[start];
