@@ -21,4 +21,25 @@ Note that you must do this in-place without making a copy of the array.
 
 ## NOTE
 Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
+class Solution {
+public:
+    void moveZeroes(vector<int>& nums) {
+        int size = nums.size();
+        int counter = 0;  
+        int t;
+
+        for (int i = 0; i < size - 1; i++) 
+        {
+            for (int j = 0; j < size - 1; j++) 
+         {
+                if (nums[j] == 0) 
+                {
+                    t = nums[j + 1];
+                    nums[j + 1] = nums[j];
+                    nums[j] = t;
+                }     
+            }
+     }
+   }
+};
 
