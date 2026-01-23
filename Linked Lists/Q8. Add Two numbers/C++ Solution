@@ -1,0 +1,44 @@
+class Solution { 
+public:
+    ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
+        // To initialise the solution LinkedList, we create a dummy node with a placeholder value
+        ListNode* dummyHead = new ListNode(-1);
+        ListNode* curr = dummyHead; // Pointer to build the result list
+        ListNode* temp1 = l1; // Pointer to traverse l1
+        ListNode* temp2 = l2; // Pointer to traverse l2
+        int carry = 0; // To store carry if sum >= 10
+
+        // We will continue until both l1 and l2 are fully traversed
+        while (temp1 != nullptr || temp2 != nullptr) {
+            // Start sum with the carry from the previous position
+            int sum = carry;
+            // Add the values at the current nodes (if present)
+            if (temp1) sum += temp1->val;
+            if (temp2) sum += temp2->val;
+            
+            // Create a new node in the solution list with the current digit (sum mod 10)
+            ListNode* newHead = new ListNode(sum % 10);
+            carry = sum / 10; // Update carry for the next digit
+            curr->next = newHead;
+            curr = curr->next;
+            
+            // Move the input list pointers forward
+            if (temp1) temp1 = temp1->next;
+            if (temp2) temp2 = temp2->next;
+        }
+
+        // After processing all digits, if there is a carry left, add it as a new node
+        if (carry) {
+            ListNode* newHead = new ListNode(carry);
+            curr->next = newHead;
+        }
+
+        // Return the next of dummyHead which is the head of the resulting sum list
+        return dummyHead->next;
+    }
+};
+
+//Complexity Analysis
+//->Time Complexity: O(max(n, m))
+//->Space Complexity: O(max(n, m))
+//Here, n is the number of nodes in l1 and m is the number of nodes in l2.
