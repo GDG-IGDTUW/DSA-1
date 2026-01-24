@@ -1,0 +1,43 @@
+class Solution {
+public:
+    int search(vector<int>& nums, int target) {
+        int n = nums.size();
+        int high = n-1;
+        int low = 0;
+        while (low<=high){
+            //Computing mid index avoiding overflow
+            int mid = low+(high-low)/2;
+            
+            //If target is found at mid, return mid
+            if (nums[mid]==target) return mid;
+
+            //considering the case left half (low ->mid) of the array nums is sorted
+            if (nums[mid]>=nums[low]){
+                //If the target lies in sorted left half, move high to search left side
+                if (nums[low]<=target && target<=nums[mid]){
+                    high = mid-1;
+                }
+                //otherwise search in right half
+                else low = mid+1;
+            }
+            
+            //consider the case when right half of the array (mid->high) is sorted 
+            else{
+                //If the target lies in sorted right half
+                if (nums[mid]<target && target<=nums[high])
+                low = mid+1;
+                //Otherwise search left half
+                else high = mid-1;
+
+            }
+        }
+        //Target not found
+        return -1;
+    }
+};
+
+// COMPLEXITY ANALYSIS
+// -> Time Complexity = Big O(log n)
+//       We apply the technique of binary search on the possible answers. In every iteration, the search window is halved.
+// -> Space Complexity = Big O(1)
+//       We do not use any additional memeory
