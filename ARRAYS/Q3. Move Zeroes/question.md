@@ -21,4 +21,3 @@ Note that you must do this in-place without making a copy of the array.
 
 ## NOTE
 Provide a screenshot of the accepted solution on LeetCode, including the left pane in description of Pull request and push the solution.
-
