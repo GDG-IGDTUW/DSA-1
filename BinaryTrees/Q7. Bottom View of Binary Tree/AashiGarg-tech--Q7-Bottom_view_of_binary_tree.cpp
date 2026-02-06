@@ -18,10 +18,8 @@ class Solution {
           vector<int> ans;
           if (!root) return ans;
   
-          // horizontal distance -> node value
           map<int, int> mp;
   
-          // queue stores node and its horizontal distance
           queue<pair<Node*, int>> q;
           q.push({root, 0});
   
@@ -32,7 +30,6 @@ class Solution {
               Node* node = curr.first;
               int hd = curr.second;
   
-              // overwrite so bottom-most remains
               mp[hd] = node->data;
   
               if (node->left)
@@ -42,7 +39,6 @@ class Solution {
                   q.push({node->right, hd + 1});
           }
   
-          // collect result from leftmost to rightmost HD
           for (auto &x : mp) {
               ans.push_back(x.second);
           }
