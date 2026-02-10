@@ -1,0 +1,25 @@
+from collections import defaultdict
+
+class Solution:
+    def subarraySum(self, nums, k):
+        prefix_count = defaultdict(int)
+        prefix_count[0] = 1 
+        
+        curr_sum = 0
+        result = 0
+        
+        for num in nums:
+            curr_sum += num
+            
+            # Check if (curr_sum - k) has been seen before
+            if (curr_sum - k) in prefix_count:
+                result += prefix_count[curr_sum - k]
+            
+            # Store current prefix sum
+            prefix_count[curr_sum] += 1
+        
+        return result
+
+# Complexity Analysis
+# 1. Time Complexity - Big O(N) because for every element we perform one hash lookup and one hash update
+# 2. Space Complexity - Big O(N) In the worst case every prefix sum is unique so, we end up storing all the prefix sum
